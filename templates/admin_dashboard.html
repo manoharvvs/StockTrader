@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockTrader Admin Dashboard</title>
-    <link rel="stylesheet" href="admindasboard.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admindashboard.css') }}">
 </head>
 <body>
     <div class="admin-container">
@@ -248,7 +248,6 @@
             </div>
         </div>
     </div>
-
-    <script src="admindashboard.js"></script>
+<script src="{{ url_for('static', filename='js/admindashboard.js') }}"></script>
 </body>
 </html>
