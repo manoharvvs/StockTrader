@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="transaction.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <h1>Transaction History</h1>
+
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search transactions..." onkeyup="filterTable()">
+            <select id="statusFilter" onchange="filterTable()">
+                <option value="">All Status</option>
+                <option value="success">Success</option>
+                <option value="pending">Pending</option>
+                <option value="failed">Failed</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table id="transactionsTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2025-04-05</td>
+                        <td>Stock Purchase - AAPL</td>
+                        <td>$1,234.56</td>
+                        <td><span class="status success">Success</span></td>
+                        <td>Debit</td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-04</td>
+                        <td>Dividend Received - TSLA</td>
+                        <td>$78.90</td>
+                        <td><span class="status success">Success</span></td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-03</td>
+                        <td>Withdrawal to Bank</td>
+                        <td>$500.00</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>Debit</td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-02</td>
+                        <td>Deposit from Bank</td>
+                        <td>$2,000.00</td>
+                        <td><span class="status success">Success</span></td>
+                        <td>Credit</td>
+                    </tr>
+                    <tr>
+                        <td>2025-04-01</td>
+                        <td>Failed Trade Attempt</td>
+                        <td>$0.00</td>
+                        <td><span class="status failed">Failed</span></td>
+                        <td>Debit</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

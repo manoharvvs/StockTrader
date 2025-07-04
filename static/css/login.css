@@ -11,17 +11,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px 0;
 }
 
-/* Shared Containers */
-.auth-container {
+.login-container {
     background: rgba(255, 255, 255, 0.95);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -43,7 +41,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Form Elements */
 .form-group {
     margin-bottom: 20px;
 }
@@ -55,8 +52,7 @@ body {
     font-weight: 500;
 }
 
-.form-group input,
-.form-group select {
+.form-group input {
     width: 100%;
     padding: 12px 15px;
     border: 2px solid #e1e5e9;
@@ -65,8 +61,7 @@ body {
     transition: border-color 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
     outline: none;
     border-color: #667eea;
 }
@@ -75,9 +70,22 @@ body {
     color: #999;
 }
 
-/* Buttons */
-.login-btn,
-.signup-btn {
+.forgot-password {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.forgot-password a {
+    color: #667eea;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.login-btn {
     width: 100%;
     padding: 12px;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -90,53 +98,11 @@ body {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.login-btn:hover,
-.signup-btn:hover {
+.login-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
 }
 
-.signup-btn:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    transform: none;
-}
-
-/* Links */
-.forgot-password,
-.signup-link,
-.login-link {
-    text-align: right;
-    margin-top: 10px;
-    color: #666;
-    font-size: 0.9rem;
-}
-
-.forgot-password {
-    margin-bottom: 20px;
-}
-
-.signup-link,
-.login-link {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.forgot-password a,
-.signup-link a,
-.login-link a {
-    color: #667eea;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.forgot-password a:hover,
-.signup-link a:hover,
-.login-link a:hover {
-    text-decoration: underline;
-}
-
-/* Divider */
 .divider {
     text-align: center;
     margin: 30px 0;
@@ -159,7 +125,6 @@ body {
     padding: 0 15px;
 }
 
-/* Social Login */
 .social-login {
     display: flex;
     gap: 10px;
@@ -184,66 +149,52 @@ body {
     background: #f8f9ff;
 }
 
-/* Password Strength Meter */
-.password-strength {
-    margin-top: 5px;
+.signup-link {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+}
+
+.signup-link a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+.market-stats {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
     font-size: 0.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.strength-weak {
-    color: #dc3545;
+.market-stats .stat {
+    margin-bottom: 5px;
 }
 
-.strength-medium {
-    color: #ffc107;
-}
-
-.strength-strong {
+.stat-positive {
     color: #28a745;
 }
 
-/* Ticker / Market Info */
-.market-ticker {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 10px;
-    font-size: 0.9rem;
-    white-space: nowrap;
-    overflow: hidden;
+.stat-negative {
+    color: #dc3545;
 }
 
-.ticker-content {
-    display: inline-block;
-    padding-left: 100%;
-    animation: ticker 30s linear infinite;
-}
-
-@keyframes ticker {
-    0% {
-        transform: translate3d(100%, 0, 0);
-    }
-    100% {
-        transform: translate3d(-100%, 0, 0);
-    }
-}
-
-/* Responsive Adjustments */
 @media (max-width: 480px) {
-    .auth-container {
+    .login-container {
         margin: 20px;
         padding: 30px 20px;
     }
 
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .market-ticker {
+    .market-stats {
         display: none;
     }
 }
