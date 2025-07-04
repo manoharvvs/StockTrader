@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport"content="width=device-width, initial-scale=1.0">
     <title>StockTrader - Login</title>
-    <link rel="preload" href="{{ url_for('static', filename='css/auth.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" as="style">
 </head>
 <body>
-    <div class="market-stats">
-        <div class="stat">NASDAQ: <span class="stat-positive">+1.2%</span></div>
-        <div class="stat">S&P 500: <span class="stat-positive">+0.8%</span></div>
-        <div class="stat">DOW: <span class="stat-negative">-0.3%</span></div>
-    </div>
+   <div class="background-image">
+        <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="Background Image">
 
     <div class="login-container">
         <div class="logo">
@@ -50,7 +47,6 @@
             Don't have an account? <a href="signup.html">Sign up here</a>
         </div>
     </div>
-
-    <script src="script.js"></script>
+</div>
 </body>
 </html>

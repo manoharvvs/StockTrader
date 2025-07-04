@@ -4,14 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockTrader - Sign Up</title>
-    <link rel="preload" href="{{ url_for('static', filename='css/auth.css') }}" as="style">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/signup.css') }}" as="style">
 </head>
 <body>
-    <div class="market-ticker">
-        <div class="ticker-content">
-            AAPL: $150.25 (+1.2%) | GOOGL: $2,750.80 (+0.8%) | MSFT: $305.15 (-0.3%) | TSLA: $850.40 (+2.1%) | AMZN: $3,200.75 (+0.5%)
-        </div>
-    </div>
+   
 
     <div class="signup-container">
         <div class="logo">
@@ -80,14 +76,7 @@
             <button type="submit" class="signup-btn" id="submitBtn">Create Account</button>
         </form>
 
-        <div class="divider">
-            <span>or</span>
-        </div>
-
-        <div class="social-login">
-            <a href="#" class="social-btn" onclick="alert('Google signup integration would be implemented here')">Google</a>
-            <a href="#" class="social-btn" onclick="alert('Apple signup integration would be implemented here')">Apple</a>
-        </div>
+        
 
         <div class="login-link">
             Already have an account? <a href="login.html">Sign in here</a>
