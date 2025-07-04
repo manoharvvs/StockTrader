@@ -38,7 +38,10 @@ def login():
 def Trader_dashboard():
     # Add logic to fetch trader data if needed
     return render_template("trader_dashboard.html")
-
+@app.route('/admin_dashboard')
+def admin_dashboard():
+    # Add logic to fetch trader data if needed
+    return render_template("admin_dashboard.html")
 @app.route('/transaction_history')
 def Transaction_history():
     # Add logic to fetch transaction history
