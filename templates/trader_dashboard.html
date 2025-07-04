@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Trader Dashboard - Stocker</title>
+    <link rel="preload" href="{{ url_for('static', filename='css/style.css') }}" as="style">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Stocker</div>
+        <ul class="nav-links">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Buy/Sell</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Transactions</a></li>
+            <li><a href="#">Logout</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <div class="dashboard">
+        <div class="card">
+            <h3>Total Portfolio Value</h3>
+            <p>₹ 2,45,000</p>
+        </div>
+        <div class="card">
+            <h3>Today's Profit/Loss</h3>
+            <p class="profit">+₹ 5,200</p>
+        </div>
+        <div class="card">
+            <h3>Stocks Owned</h3>
+            <ul>
+                <li>TCS - 10 shares</li>
+                <li>INFY - 15 shares</li>
+                <li>RELIANCE - 8 shares</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Recent Transactions</h3>
+            <ul>
+                <li>Bought 5 INFY @ ₹1,450</li>
+                <li>Sold 2 RELIANCE @ ₹2,500</li>
+                <li>Bought 3 TCS @ ₹3,300</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
