@@ -6,15 +6,19 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+    /* Replace the gradient with an image */
+    background: url('/static/images/background_login2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    /* Ensures the image covers the entire screen */
+
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .login-container {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(39, 54, 82, 0.95);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -30,14 +34,14 @@ body {
 }
 
 .logo h1 {
-    color: #333;
+    color: #cbccd4e5;
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
 .logo p {
-    color: #666;
+    color: #b3b5bb;
     font-size: 0.9rem;
 }
 
@@ -48,7 +52,7 @@ body {
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
+    color: #f7f7f7;
     font-weight: 500;
 }
 
@@ -63,7 +67,7 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: #667eea;
+    border-color: #eac266;
 }
 
 .form-group input::placeholder {
@@ -76,7 +80,7 @@ body {
 }
 
 .forgot-password a {
-    color: #667eea;
+    color: #dc8d86;
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -88,7 +92,7 @@ body {
 .login-btn {
     width: 100%;
     padding: 12px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #4f4ba2 100%);
     color: white;
     border: none;
     border-radius: 8px;
@@ -100,7 +104,7 @@ body {
 
 .login-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
 .divider {
@@ -152,11 +156,11 @@ body {
 .signup-link {
     text-align: center;
     margin-top: 20px;
-    color: #666;
+    color: #f3f1f1;
 }
 
 .signup-link a {
-    color: #667eea;
+    color: #72ee9d;
     text-decoration: none;
     font-weight: 500;
 }
