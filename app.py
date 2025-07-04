@@ -26,6 +26,10 @@ def signup():
 def login():
     return render_template("login.html")
 
+@app.route('/trader_dashboard', methods=['GET', 'POST'])
+def dashboard():    
+    return render_template("trader_dashboard.html")
+
 
 
 

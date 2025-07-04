@@ -43,7 +43,7 @@
                     </div>
           </header>
           
-          <!-- Main content with ARIA landmark -->
+          <!-- Main content -->
           <main id="main-content" class="main-content" role="main">
                     <section class="hero">
                               <div class="container">
@@ -69,7 +69,7 @@
                                                   administrators</p>
           
                                         <div class="services-grid">
-                                                  <!-- Service Card 1 -->
+                                                  <!-- Service Card-1 Trader Dashboard -->
                                                   <article class="service-card">
                                                             <div class="card-icon">
                                                                       <i class="fas fa-users-cog"></i>
@@ -77,13 +77,13 @@
                                                             <h3 class="card-title">Trader Management</h3>
                                                             <p class="card-description">Admin dashboard for managing all
                                                                       trader accounts and permissions</p>
-                                                            <a href="{{ url_for('service01') }}" class="card-link"
+                                                            <a href="{{ url_for('Trader_dashboard') }}" class="card-link"
                                                                       aria-label="Learn more about Trader Management">
                                                                       Learn More <i class="fas fa-chevron-right"></i>
                                                             </a>
                                                   </article>
           
-                                                  <!-- Service Card 2 -->
+                                                  <!-- Service Card 2  Transaction History-->
                                                   <article class="service-card">
                                                             <div class="card-icon">
                                                                       <i class="fas fa-exchange-alt"></i>
@@ -91,13 +91,13 @@
                                                             <h3 class="card-title">Transaction History</h3>
                                                             <p class="card-description">Complete audit trail of all
                                                                       trading activity</p>
-                                                            <a href="{{ url_for('service02') }}" class="card-link"
+                                                            <a href="{{ url_for('Transaction_history') }}" class="card-link"
                                                                       aria-label="Learn more about Transaction History">
                                                                       Learn More <i class="fas fa-chevron-right"></i>
                                                             </a>
                                                   </article>
           
-                                                  <!-- Service Card 3 -->
+                                                  <!-- Service Card 3 Portfolio Overview-->
                                                   <article class="service-card">
                                                             <div class="card-icon">
                                                                       <i class="fas fa-chart-pie"></i>
@@ -105,13 +105,13 @@
                                                             <h3 class="card-title">Portfolio Overview</h3>
                                                             <p class="card-description">Comprehensive analytics for all
                                                                       portfolios</p>
-                                                            <a href="{{ url_for('service03') }}" class="card-link"
+                                                            <a href="{{ url_for('portfolio_overview') }}" class="card-link"
                                                                       aria-label="Learn more about Portfolio Overview">
                                                                       Learn More <i class="fas fa-chevron-right"></i>
                                                             </a>
                                                   </article>
           
-                                                  <!-- Service Card 4 -->
+                                                  <!-- Service Card 4  Market Trading-->
                                                   <article class="service-card">
                                                             <div class="card-icon">
                                                                       <i class="fas fa-chart-line"></i>
@@ -119,13 +119,13 @@
                                                             <h3 class="card-title">Market Trading</h3>
                                                             <p class="card-description">Real-time market data and
                                                                       trading execution</p>
-                                                            <a href="{{ url_for('service04') }}" class="card-link"
+                                                            <a href="{{ url_for('Market_trading') }}" class="card-link"
                                                                       aria-label="Learn more about Market Trading">
                                                                       Learn More <i class="fas fa-chevron-right"></i>
                                                             </a>
                                                   </article>
           
-                                                  <!-- Service Card 5 -->
+                                                  <!-- Service Card 5 Profile -->
                                                   <article class="service-card">
                                                             <div class="card-icon">
                                                                       <i class="fas fa-wallet"></i>
@@ -133,7 +133,7 @@
                                                             <h3 class="card-title">My Portfolio</h3>
                                                             <p class="card-description">Personalized dashboard for your
                                                                       investments</p>
-                                                            <a href="{{ url_for('service05') }}" class="card-link"
+                                                            <a href="{{ url_for('Profile') }}" class="card-link"
                                                                       aria-label="Learn more about My Portfolio">
                                                                       Learn More <i class="fas fa-chevron-right"></i>
                                                             </a>
