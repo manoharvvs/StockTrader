@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockTrader Admin Dashboard</title>
+    <link rel="stylesheet" href="admindasboard.css">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <span style="font-size: 1.5rem;">📊</span>
+                    <h2>Admin</h2>
+                </div>
+                <button class="sidebar-toggle" onclick="toggleSidebar()">☰</button>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-item">
+                    <a href="#" class="nav-link active" onclick="showSection('dashboard')">
+                        <span class="nav-icon">📈</span>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('users')">
+                        <span class="nav-icon">👥</span>
+                        <span class="nav-text">Users</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('trades')">
+                        <span class="nav-icon">💰</span>
+                        <span class="nav-text">Trades</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('stocks')">
+                        <span class="nav-icon">📊</span>
+                        <span class="nav-text">Stocks</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('reports')">
+                        <span class="nav-icon">📋</span>
+                        <span class="nav-text">Reports</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('settings')">
+                        <span class="nav-icon">⚙️</span>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                </div>
+                <div class="nav-item">
+                    <a href="#" class="nav-link" onclick="showSection('support')">
+                        <span class="nav-icon">🎧</span>
+                        <span class="nav-text">Support</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="mainContent">
+            <!-- Header -->
+            <div class="header">
+                <div class="header-left">
+                    <h1>Dashboard Overview</h1>
+                </div>
+                <div class="header-right">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search users, trades, stocks...">
+                    </div>
+                    <div class="admin-profile" onclick="showProfileMenu()">
+                        <div class="admin-avatar">IL</div>
+                        <div>
+                            <div style="font-weight: 500;">Admin</div>
+                            <div style="font-size: 0.8rem; color: #64748b;">Admin</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Content -->
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card users">
+                        <div class="stat-header">
+                            <div class="stat-title">Total Users</div>
+                            <div class="stat-icon">👥</div>
+                        </div>
+                        <div class="stat-value">12,847</div>
+                        <div class="stat-change positive">+8.2% from last month</div>
+                    </div>
+                    <div class="stat-card trades">
+                        <div class="stat-header">
+                            <div class="stat-title">Total Trades</div>
+                            <div class="stat-icon">💰</div>
+                        </div>
+                        <div class="stat-value">45,231</div>
+                        <div class="stat-change positive">+12.5% from last month</div>
+                    </div>
+                    <div class="stat-card revenue">
+                        <div class="stat-header">
+                            <div class="stat-title">Monthly Revenue</div>
+                            <div class="stat-icon">💵</div>
+                        </div>
+                        <div class="stat-value">$892,450</div>
+                        <div class="stat-change positive">+15.3% from last month</div>
+                    </div>
+                    <div class="stat-card active">
+                        <div class="stat-header">
+                            <div class="stat-title">Active Users</div>
+                            <div class="stat-icon">🟢</div>
+                        </div>
+                        <div class="stat-value">3,842</div>
+                        <div class="stat-change negative">-2.1% from yesterday</div>
+                    </div>
+                </div>
+
+                <!-- Charts and Widgets -->
+                <div class="dashboard-grid">
+                    <div class="chart-container">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Trading Volume</h3>
+                            <div class="table-actions">
+                                <button class="btn btn-secondary">Week</button>
+                                <button class="btn btn-primary">Month</button>
+                            </div>
+                        </div>
+                        <div class="chart-placeholder">
+                            📊 Interactive Trading Volume Chart
+                            <br><span style="font-size: 0.9rem; color: #94a3b8;">Chart integration would be implemented here</span>
+                        </div>
+                    </div>
+                    <div class="widget-container">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Recent Activities</h3>
+                        </div>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon user">👤</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">New user registered</div>
+                                    <div class="activity-time">2 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon trade">💰</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Large trade executed</div>
+                                    <div class="activity-time">5 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon alert">⚠️</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">System alert triggered</div>
+                                    <div class="activity-time">12 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon user">👤</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">User verification completed</div>
+                                    <div class="activity-time">18 minutes ago</div>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon trade">💰</div>
+                                <div class="activity-content">
+                                    <div class="activity-title">High-frequency trading detected</div>
+                                    <div class="activity-time">25 minutes ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Table -->
+                <div class="data-table-container">
+                    <div class="table-header">
+                        <h3 class="table-title">Recent Users</h3>
+                        <div class="table-actions">
+                            <button class="btn btn-secondary">Export</button>
+                            <button class="btn btn-primary">Add User</button>
+                        </div>
+                    </div>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Join Date</th>
+                                <th>Status</th>
+                                <th>Total Trades</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Smith</td>
+                                <td>john.smith@email.com</td>
+                                <td>Jul 1, 2025</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>15</td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Johnson</td>
+                                <td>sarah.j@email.com</td>
+                                <td>Jun 28, 2025</td>
+                                <td><span class="status-badge status-pending">Pending</span></td>
+                                <td>3</td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mike Davis</td>
+                                <td>mike.davis@email.com</td>
+                                <td>Jun 25, 2025</td>
+                                <td><span class="status-badge status-active">Active</span></td>
+                                <td>42</td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">View</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Emma Wilson</td>
+                                <td>emma.wilson@email.com</td>
+                                <td>Jun 22, 2025</td>
+                                <td><span class="status-badge status-suspended">Suspended</span></td>
+                                <td>8</td>
+                                <td>
+                                    <button class="btn btn-secondary" style="padding: 4px 8px; font-size: 0.8rem;">View</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admindashboard.js"></script>
+</body>
+</html>

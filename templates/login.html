@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" as="style">
 </head>
 <body>
-   <div class="background-image">
-        <img src="{{ url_for('static', filename='images/background.jpg') }}" alt="Background Image">
 
     <div class="login-container">
         <div class="logo">
@@ -34,19 +32,10 @@
             <button type="submit" class="login-btn">Sign In</button>
         </form>
 
-        <div class="divider">
-            <span>or</span>
-        </div>
-
-        <div class="social-login">
-            <a href="#" class="social-btn" onclick="alert('Google login integration would be implemented here')">Google</a>
-            <a href="#" class="social-btn" onclick="alert('Apple login integration would be implemented here')">Apple</a>
-        </div>
-
         <div class="signup-link">
-            Don't have an account? <a href="signup.html">Sign up here</a>
+            Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a>
         </div>
-    </div>
+    
 </div>
 </body>
 </html>
