@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stock Trader Profile - Suresh</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Profile Header -->
+    <div class="profile-header">
+      <div class="profile-info">
+        <div class="profile-avatar">S</div>
+        <div class="profile-details">
+          <h1>Suresh Kumar</h1>
+          <div class="subtitle">Professional Stock Trader</div>
+          <div class="profile-stats">
+            <div class="stat-item">
+              <div class="stat-value">3.2Y</div>
+              <div class="stat-label">Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">847</div>
+              <div class="stat-label">Total Trades</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-value">78.5%</div>
+              <div class="stat-label">Success Rate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Left Column -->
+      <div class="content-left">
+        <!-- Portfolio Overview -->
+        <div class="section-card">
+          <h2 class="section-title">📊 Portfolio Overview</h2>
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <h3>Total Value</h3>
+              <div class="value">₹12,45,678</div>
+              <div class="change">+15.2% this month</div>
+            </div>
+            <div class="portfolio-item">
+              <h3>Today's P&L</h3>
+              <div class="value">+₹8,945</div>
+              <div class="change">+2.3% today</div>
+            </div>
+            <div class="portfolio-item">
+              <h3>Available Cash</h3>
+              <div class="value">₹45,230</div>
+              <div class="change">Ready to invest</div>
+            </div>
+          </div>
+          <div class="action-buttons">
+            <button class="btn btn-primary">Buy Stocks</button>
+            <button class="btn btn-success">Sell Holdings</button>
+          </div>
+        </div>
+
+        <!-- Current Holdings -->
+        <div class="section-card">
+          <h2 class="section-title">📈 Current Holdings</h2>
+          <table class="holdings-table">
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>Quantity</th>
+                <th>Avg Price</th>
+                <th>Current Price</th>
+                <th>P&L</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="stock-symbol">RELIANCE</td>
+                <td>50</td>
+                <td>₹2,345</td>
+                <td>₹2,456</td>
+                <td class="positive">+₹5,550</td>
+              </tr>
+              <tr>
+                <td class="stock-symbol">TCS</td>
+                <td>25</td>
+                <td>₹3,789</td>
+                <td>₹3,892</td>
+                <td class="positive">+₹2,575</td>
+              </tr>
+              <tr>
+                <td class="stock-symbol">INFY</td>
+                <td>40</td>
+                <td>₹1,567</td>
+                <td>₹1,523</td>
+                <td class="negative">-₹1,760</td>
+              </tr>
+              <tr>
+                <td class="stock-symbol">HDFC</td>
+                <td>30</td>
+                <td>₹2,890</td>
+                <td>₹2,945</td>
+                <td class="positive">+₹1,650</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Recent Trading Activity -->
+        <div class="section-card">
+          <h2 class="section-title">⚡ Recent Trading Activity</h2>
+          <div class="activity-item">
+            <div class="activity-details">
+              <div class="activity-action">BUY - RELIANCE (10 shares)</div>
+              <div class="activity-time">Today, 2:30 PM</div>
+            </div>
+            <div class="activity-amount positive">₹24,560</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-details">
+              <div class="activity-action">SELL - WIPRO (20 shares)</div>
+              <div class="activity-time">Yesterday, 11:15 AM</div>
+            </div>
+            <div class="activity-amount negative">₹8,940</div>
+          </div>
+          <div class="activity-item">
+            <div class="activity-details">
+              <div class="activity-action">BUY - TCS (5 shares)</div>
+              <div class="activity-time">2 days ago, 3:45 PM</div>
+            </div>
+            <div class="activity-amount positive">₹18,945</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="content-right">
+        <!-- Account Information -->
+        <div class="section-card">
+          <h2 class="section-title">👤 Account Information</h2>
+          <div class="account-info-grid">
+            <div class="info-item">
+              <span class="info-label">Account ID</span>
+              <span class="info-value">SK789456</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Member Since</span>
+              <span class="info-value">Jan 2022</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Risk Level</span>
+              <span class="info-value">Moderate</span>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Account Type</span>
+              <span class="info-value">Premium</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Watchlist -->
+        <div class="section-card">
+          <h2 class="section-title">👀 Watchlist</h2>
+          <div class="watchlist-item">
+            <div class="watchlist-stock">
+              <div class="watchlist-symbol">NIFTY 50</div>
+              <div class="watchlist-name">Index</div>
+            </div>
+            <div class="watchlist-price">
+              <div class="watchlist-value">19,845.67</div>
+              <div class="watchlist-change positive">+1.2%</div>
+            </div>
+          </div>
+          <div class="watchlist-item">
+            <div class="watchlist-stock">
+              <div class="watchlist-symbol">SBIN</div>
+              <div class="watchlist-name">State Bank of India</div>
+            </div>
+            <div class="watchlist-price">
+              <div class="watchlist-value">₹567.85</div>
+              <div class="watchlist-change negative">-0.8%</div>
+            </div>
+          </div>
+          <div class="watchlist-item">
+            <div class="watchlist-stock">
+              <div class="watchlist-symbol">ICICIBANK</div>
+              <div class="watchlist-name">ICICI Bank</div>
+            </div>
+            <div class="watchlist-price">
+              <div class="watchlist-value">₹945.30</div>
+              <div class="watchlist-change positive">+2.1%</div>
+            </div>
+          </div>
+          <div class="watchlist-item">
+            <div class="watchlist-stock">
+              <div class="watchlist-symbol">ADANIPORTS</div>
+              <div class="watchlist-name">Adani Ports</div>
+            </div>
+            <div class="watchlist-price">
+              <div class="watchlist-value">₹789.45</div>
+              <div class="watchlist-change positive">+3.5%</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Performance Metrics -->
+        <div class="section-card">
+          <h2 class="section-title">📊 Performance Metrics</h2>
+          <div class="info-item">
+            <span class="info-label">Total Returns</span>
+            <span class="info-value positive">+18.7%</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Best Trade</span>
+            <span class="info-value positive">+₹15,670</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Worst Trade</span>
+            <span class="info-value negative">-₹3,240</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Avg Hold Time</span>
+            <span class="info-value">12 days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
