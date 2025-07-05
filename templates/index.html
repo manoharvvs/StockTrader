@@ -66,7 +66,9 @@
                     </section>
                     </main>
           
-                    <section id="services" class="services-section">
+
+<!-- Services Section -->
+                  <section id="services" class="services-section">
                               <div class="container">
                                         <h2 class="section-title">Our Services</h2>
                                         <p class="section-description">Comprehensive solutions for traders and administrators</p>
@@ -87,7 +89,7 @@
                                                                                 <p class="card-description">Admin dashboard for managing all
                                                                                           trader accounts and permissions with advanced
                                                                                           analytics and reporting tools.</p>
-                                                                                <a href="{{ url_for('admin_dashboard') }}" class="card-link"
+                                                                                <a href="{{ url_for('login') }}" class="card-link"
                                                                                           aria-label="Learn more about Trader Management">
                                                                                           Explore <i class="fas fa-chevron-right"></i>
                                                                                 </a>
@@ -104,7 +106,7 @@
                                                                                 <p class="card-description">Complete audit trail of all
                                                                                           trading activity with detailed filters and export
                                                                                           capabilities.</p>
-                                                                                <a href="{{ url_for('Transaction_history') }}"
+                                                                                <a href="{{ url_for('login') }}"
                                                                                           class="card-link"
                                                                                           aria-label="Learn more about Transaction History">
                                                                                           Explore <i class="fas fa-chevron-right"></i>
@@ -122,7 +124,7 @@
                                                                                 <p class="card-description">Comprehensive analytics for all
                                                                                           portfolios with performance metrics and risk
                                                                                           assessment.</p>
-                                                                                <a href="{{ url_for('portfolio_overview') }}"
+                                                                                <a href="{{ url_for('login') }}"
                                                                                           class="card-link"
                                                                                           aria-label="Learn more about Portfolio Overview">
                                                                                           Explore <i class="fas fa-chevron-right"></i>
@@ -140,14 +142,14 @@
                                                                                 <p class="card-description">Real-time market data and
                                                                                           trading execution with advanced order types and
                                                                                           alerts.</p>
-                                                                                <a href="{{ url_for('Market_trading') }}" class="card-link"
+                                                                                <a href="{{ url_for('login') }}" class="card-link"
                                                                                           aria-label="Learn more about Market Trading">
                                                                                           Explore <i class="fas fa-chevron-right"></i>
                                                                                 </a>
                                                                       </div>
                                                             </article>
                     
-                                                            <!-- Service Card 5 - Profile -->
+                                                            <!-- Service Card 5 
                                                             <article class="service-card">
                                                                       <div class="card-bg"
                                                                                 style="background-image: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
@@ -163,7 +165,7 @@
                                                                       </div>
                                                             </article>
                                                   </div>
-                    
+                    - Profile -->
                                                   <button class="carousel-nav next" aria-label="Next service">
                                                             <i class="fas fa-chevron-right"></i>
                                                   </button>

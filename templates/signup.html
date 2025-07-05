@@ -44,7 +44,7 @@
                 </div>
                 <div class="password-strength">Use 8+ characters with a mix of letters & numbers</div>
             </div>
-
+<!-- 
             <div class="form-group">
                 <label for="country">Country</label>
                 <select id="country" name="country" required>
@@ -52,7 +52,15 @@
                     <option value="US">United States</option>
                     <option value="UK">United Kingdom</option>
                     <option value="CA">Canada</option>
-                    <!-- Add more countries as needed -->
+                     //Add more countries as needed 
+                </select>
+            </div> -->
+            <div class="mb-3">
+                <label for="role" class="form-label">Select Role</label>
+                <select class="form-select" id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="trader">Trader</option>
+                    <option value="admin">Admin</option>
                 </select>
             </div>
 
@@ -73,7 +81,7 @@
             </div>
 
             <div class="login-link">
-                Already have an account? <a href="/login">Log in</a>
+                Already have an account? <a href="{{ url_for('login') }}">Log in</a>
             </div>
         </form>
     </div>

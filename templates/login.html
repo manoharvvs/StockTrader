@@ -34,6 +34,15 @@
         </div>
 
         <form action="/login" method="POST">
+            <div class="mb-3">
+                <label for="role" class="form-label">Select Role</label>
+                <select class="form-select" id="role" name="role" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="trader">Trader</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+        
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
@@ -52,7 +61,7 @@
             </div>
 
             <button type="submit" class="login-btn">Login</button>
-
+<!-- 
             <div class="divider">
                 <span>OR</span>
             </div>
@@ -66,7 +75,7 @@
                     <i class="fab fa-apple"></i>
                     <span>Apple</span>
                 </a>
-            </div>
+            </div> -->
 
             <div class="signup-link">
                 Don't have an account? <a href="/signup">Sign Up</a>
