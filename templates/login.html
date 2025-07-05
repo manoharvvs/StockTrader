@@ -1,41 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <title>StockTrader - Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" as="style">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StockTrader Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
+
 </head>
+
 <body>
+    <!-- <div class="market-stats">
+        <div class="stat stat-positive">
+            <i class="fas fa-arrow-up"></i>
+            <span>NASDAQ: +1.2%</span>
+        </div>
+        <div class="stat stat-negative">
+            <i class="fas fa-arrow-down"></i>
+            <span>DOW: -0.5%</span>
+        </div>
+        <div class="stat stat-positive">
+            <i class="fas fa-arrow-up"></i>
+            <span>S&P 500: +0.8%</span>
+        </div>
+    </div> -->
 
     <div class="login-container">
         <div class="logo">
-            <h1> StockTrader</h1>
-            <p>Your Gateway to Financial Markets</p>
+            <h1>StockTrader</h1>
+            <p>Trade with confidence, invest with wisdom</p>
         </div>
 
-        <form id="loginForm">
+        <form action="/login" method="POST">
             <div class="form-group">
-                <label for="email">Email Address</label>
+                <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
 
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Enter your password" required>
-            </div>
-
+                <div class="password-input-container">
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    <button type="button" class="toggle-password" aria-label="Show password">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </div>      </div>
             <div class="forgot-password">
-                <a href="#" onclick="alert('Password reset functionality would be implemented here')">Forgot Password?</a>
+                <a href="/forgot-password">Forgot Password?</a>
             </div>
 
-            <button type="submit" class="login-btn">Sign In</button>
-        </form>
+            <button type="submit" class="login-btn">Login</button>
 
-        <div class="signup-link">
-            Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a>
-        </div>
-    
-</div>
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <div class="social-login">
+                <a href="#" class="social-btn">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </a>
+                <a href="#" class="social-btn">
+                    <i class="fab fa-apple"></i>
+                    <span>Apple</span>
+                </a>
+            </div>
+
+            <div class="signup-link">
+                Don't have an account? <a href="/signup">Sign Up</a>
+            </div>
+        </form>
+    </div>
 </body>
+<script src="{{ url_for('static', filename='js/login.js') }}"></script>
+
 </html>

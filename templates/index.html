@@ -10,6 +10,8 @@
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
           <!-- Font Awesome -->
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+          <!-- Favicon -->
+          <link rel="icon" href="{{ url_for('static', filename='images/favicon.ico') }}" type="image/x-icon">
 
           <!-- Style resources -->
           <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
@@ -18,197 +20,243 @@
           <!-- Header with ARIA landmarks -->
           <header class="main-header" role="banner">
                     <div class="container">
-                              <div class="header-content">
-                                        <a href="/" class="logo">
-                                                  <img src="{{ url_for('static', filename='images/logo.svg') }}"
-                                                            alt="StockTrader Logo" width="180" height="40">
-                                        </a>
+                              <nav id="primary-navigation" class="primary-navigation" role="navigation">
+                                        <div class="nav-container">
+                                                  <a href="/" class="logo">
+                                                            <img src="{{ url_for('static', filename='images/trading-logo3.png') }}"
+                                                                      alt="StockTrader Logo" width="180" height="40">
+                                                  </a>
           
-                                        <button id="nav-toggle" class="mobile-nav-toggle" aria-expanded="false"
-                                                  aria-controls="primary-navigation">
-                                                  <span class="sr-only">Menu</span>
-                                                  <i class="fas fa-bars"></i>
-                                        </button>
+                                                  <button id="nav-toggle" class="mobile-nav-toggle" aria-expanded="false"
+                                                            aria-controls="nav-list">
+                                                            <span class="sr-only">Menu</span>
+                                                            <i class="fas fa-bars"></i>
+                                                  </button>
           
-                                        <nav id="primary-navigation" class="primary-navigation" role="navigation">
-                                                  <ul class="nav-list">
-                                                            <li><a href="{{ url_for('login') }}" class="nav-link"><i
-                                                                                          class="fas fa-sign-in-alt"></i>
-                                                                                Login</a></li>
-                                                            <li><a href="{{ url_for('signup') }}" class="nav-link"><i
-                                                                                          class="fas fa-user-plus"></i>
-                                                                                Sign Up</a></li>
+                                                  <ul id="nav-list" class="nav-list">
+                                                            <li><a href="{{ url_for('login') }}" class="nav-link">
+                                                                                <i class="fas fa-sign-in-alt"></i>
+                                                                                <span class="link-text">Login</span>
+                                                                      </a></li>
+                                                            <li><a href="{{ url_for('signup') }}" class="nav-link">
+                                                                                <i class="fas fa-user-plus"></i>
+                                                                                <span class="link-text">Sign Up</span>
+                                                                      </a></li>
                                                   </ul>
-                                        </nav>
-                              </div>
+                                        </div>
+                              </nav>
                     </div>
-          </header>
-          
+                    </header>          
           <!-- Main content -->
           <main id="main-content" class="main-content" role="main">
                     <section class="hero">
+                              <div class="hero-background"></div>
                               <div class="container">
                                         <div class="hero-content">
                                                   <h1 class="hero-title">Welcome to StockTrader Pro</h1>
-                                                  <p class="hero-subtitle">Enterprise-grade stock trading and portfolio
-                                                            management</p>
+                                                  <p class="hero-subtitle">Enterprise-grade stock trading and portfolio management
+                                                  </p>
                                                   <div class="cta-buttons">
                                                             <a href="{{ url_for('signup') }}" class="btn btn-primary">Get
                                                                       Started</a>
-                                                            <a href="#services" class="btn btn-secondary">Explore
-                                                                      Features</a>
+                                                            <a href="#services" class="btn btn-secondary">Explore Features</a>
                                                   </div>
                                         </div>
                               </div>
                     </section>
+                    </main>
           
-                    <!-- Services Section -->
                     <section id="services" class="services-section">
                               <div class="container">
                                         <h2 class="section-title">Our Services</h2>
-                                        <p class="section-description">Comprehensive solutions for traders and
-                                                  administrators</p>
-          
-                                        <div class="services-grid">
-                                                  <!-- Service Card-1 Trader Dashboard -->
-                                                  <article class="service-card">
-                                                            <div class="card-icon">
-                                                                      <i class="fas fa-users-cog"></i>
-                                                            </div>
-                                                            <h3 class="card-title">Trader Management</h3>
-                                                            <p class="card-description">Admin dashboard for managing all
-                                                                      trader accounts and permissions</p>
-                                                            <a href="{{ url_for('admin_dashboard') }}" class="card-link"
-                                                                      aria-label="Learn more about Trader Management">
-                                                                      Learn More <i class="fas fa-chevron-right"></i>
-                                                            </a>
-                                                  </article>
-          
-                                                  <!-- Service Card 2  Transaction History-->
-                                                  <article class="service-card">
-                                                            <div class="card-icon">
-                                                                      <i class="fas fa-exchange-alt"></i>
-                                                            </div>
-                                                            <h3 class="card-title">Transaction History</h3>
-                                                            <p class="card-description">Complete audit trail of all
-                                                                      trading activity</p>
-                                                            <a href="{{ url_for('Transaction_history') }}" class="card-link"
-                                                                      aria-label="Learn more about Transaction History">
-                                                                      Learn More <i class="fas fa-chevron-right"></i>
-                                                            </a>
-                                                  </article>
-          
-                                                  <!-- Service Card 3 Portfolio Overview-->
-                                                  <article class="service-card">
-                                                            <div class="card-icon">
-                                                                      <i class="fas fa-chart-pie"></i>
-                                                            </div>
-                                                            <h3 class="card-title">Portfolio Overview</h3>
-                                                            <p class="card-description">Comprehensive analytics for all
-                                                                      portfolios</p>
-                                                            <a href="{{ url_for('portfolio_overview') }}" class="card-link"
-                                                                      aria-label="Learn more about Portfolio Overview">
-                                                                      Learn More <i class="fas fa-chevron-right"></i>
-                                                            </a>
-                                                  </article>
-          
-                                                  <!-- Service Card 4  Market Trading-->
-                                                  <article class="service-card">
-                                                            <div class="card-icon">
-                                                                      <i class="fas fa-chart-line"></i>
-                                                            </div>
-                                                            <h3 class="card-title">Market Trading</h3>
-                                                            <p class="card-description">Real-time market data and
-                                                                      trading execution</p>
-                                                            <a href="{{ url_for('Market_trading') }}" class="card-link"
-                                                                      aria-label="Learn more about Market Trading">
-                                                                      Learn More <i class="fas fa-chevron-right"></i>
-                                                            </a>
-                                                  </article>
-          
-                                                  <!-- Service Card 5 Profile -->
-                                                  <article class="service-card">
-                                                            <div class="card-icon">
-                                                                      <i class="fas fa-wallet"></i>
-                                                            </div>
-                                                            <h3 class="card-title">My Portfolio</h3>
-                                                            <p class="card-description">Personalized dashboard for your
-                                                                      investments</p>
-                                                            <a href="{{ url_for('Profile') }}" class="card-link"
-                                                                      aria-label="Learn more about My Portfolio">
-                                                                      Learn More <i class="fas fa-chevron-right"></i>
-                                                            </a>
-                                                  </article>
+                                        <p class="section-description">Comprehensive solutions for traders and administrators</p>
+                    
+                                        <div class="carousel-container">
+                                                  <button class="carousel-nav prev" aria-label="Previous service">
+                                                            <i class="fas fa-chevron-left"></i>
+                                                  </button>
+                    
+                                                  <div class="services-carousel">
+                                                            <!-- Service Card 1 - Trader Dashboard -->
+                                                            <article class="service-card">
+                                                                      <div class="card-bg"
+                                                                                style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                                                                      </div>
+                                                                      <div class="card-content">
+                                                                                <h3 class="card-title">Trader Management</h3>
+                                                                                <p class="card-description">Admin dashboard for managing all
+                                                                                          trader accounts and permissions with advanced
+                                                                                          analytics and reporting tools.</p>
+                                                                                <a href="{{ url_for('admin_dashboard') }}" class="card-link"
+                                                                                          aria-label="Learn more about Trader Management">
+                                                                                          Explore <i class="fas fa-chevron-right"></i>
+                                                                                </a>
+                                                                      </div>
+                                                            </article>
+                    
+                                                            <!-- Service Card 2 - Transaction History -->
+                                                            <article class="service-card">
+                                                                      <div class="card-bg"
+                                                                                style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                                                                      </div>
+                                                                      <div class="card-content">
+                                                                                <h3 class="card-title">Transaction History</h3>
+                                                                                <p class="card-description">Complete audit trail of all
+                                                                                          trading activity with detailed filters and export
+                                                                                          capabilities.</p>
+                                                                                <a href="{{ url_for('Transaction_history') }}"
+                                                                                          class="card-link"
+                                                                                          aria-label="Learn more about Transaction History">
+                                                                                          Explore <i class="fas fa-chevron-right"></i>
+                                                                                </a>
+                                                                      </div>
+                                                            </article>
+                    
+                                                            <!-- Service Card 3 - Portfolio Overview -->
+                                                            <article class="service-card">
+                                                                      <div class="card-bg"
+                                                                                style="background-image: url('https://images.unsplash.com/photo-1468254095679-bbcba94a7066?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                                                                      </div>
+                                                                      <div class="card-content">
+                                                                                <h3 class="card-title">Portfolio Overview</h3>
+                                                                                <p class="card-description">Comprehensive analytics for all
+                                                                                          portfolios with performance metrics and risk
+                                                                                          assessment.</p>
+                                                                                <a href="{{ url_for('portfolio_overview') }}"
+                                                                                          class="card-link"
+                                                                                          aria-label="Learn more about Portfolio Overview">
+                                                                                          Explore <i class="fas fa-chevron-right"></i>
+                                                                                </a>
+                                                                      </div>
+                                                            </article>
+                    
+                                                            <!-- Service Card 4 - Market Trading -->
+                                                            <article class="service-card">
+                                                                      <div class="card-bg"
+                                                                                style="background-image: url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                                                                      </div>
+                                                                      <div class="card-content">
+                                                                                <h3 class="card-title">Market Trading</h3>
+                                                                                <p class="card-description">Real-time market data and
+                                                                                          trading execution with advanced order types and
+                                                                                          alerts.</p>
+                                                                                <a href="{{ url_for('Market_trading') }}" class="card-link"
+                                                                                          aria-label="Learn more about Market Trading">
+                                                                                          Explore <i class="fas fa-chevron-right"></i>
+                                                                                </a>
+                                                                      </div>
+                                                            </article>
+                    
+                                                            <!-- Service Card 5 - Profile -->
+                                                            <article class="service-card">
+                                                                      <div class="card-bg"
+                                                                                style="background-image: url('https://images.unsplash.com/photo-1553729459-efe14ef6055d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');">
+                                                                      </div>
+                                                                      <div class="card-content">
+                                                                                <h3 class="card-title">My Portfolio</h3>
+                                                                                <p class="card-description">Personalized dashboard for your
+                                                                                          investments with custom watchlists and alerts.</p>
+                                                                                <a href="{{ url_for('Profile') }}" class="card-link"
+                                                                                          aria-label="Learn more about My Portfolio">
+                                                                                          Explore <i class="fas fa-chevron-right"></i>
+                                                                                </a>
+                                                                      </div>
+                                                            </article>
+                                                  </div>
+                    
+                                                  <button class="carousel-nav next" aria-label="Next service">
+                                                            <i class="fas fa-chevron-right"></i>
+                                                  </button>
+                                        </div>
+                    
+                                        <div class="carousel-indicators">
+                                                  <div class="indicator active" data-index="0"></div>
+                                                  <div class="indicator" data-index="1"></div>
+                                                  <div class="indicator" data-index="2"></div>
+                                                  <div class="indicator" data-index="3"></div>
+                                                  <div class="indicator" data-index="4"></div>
                                         </div>
                               </div>
                     </section>
-          </main>
-          
+                      
           <!-- Footer -->
           <footer class="main-footer" role="contentinfo">
                     <div class="container">
-                              <div class="footer-content">
-                                        <div class="footer-brand">
-                                                  <img src="{{ url_for('static', filename='images/logo-white.svg') }}"
-                                                            alt="StockTrader Logo" width="180" height="40">
-                                                  <p class="footer-text">Enterprise stock trading platform</p>
-                                        </div>
-          
-                                        <nav class="footer-navigation">
-                                                  <h4 class="footer-nav-title">Quick Links</h4>
-                                                  <ul class="footer-nav-list">
-                                                            <li><a href="/about">About Us</a></li>
-                                                            <li><a href="/contact">Contact</a></li>
-                                                            <li><a href="/privacy">Privacy Policy</a></li>
-                                                            <li><a href="/terms">Terms of Service</a></li>
-                                                  </ul>
-                                        </nav>
-          
-                                        <div class="footer-legal">
-                                                  <p>&copy; <span id="current-year"></span> StockTrader Pro. All rights
-                                                            reserved.</p>
-                                                  <div class="social-links">
-                                                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                                                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                                                  </div>
-                                        </div>
-                              </div>
+                        <div class="footer-content">
+                            <!-- Left Section: Brand Info & Social -->
+                            <div class="footer-brand-section">
+                                <div class="footer-brand">
+                                    <img src="{{ url_for('static', filename='images/trading-logo3.png') }}" 
+                                         alt="StockTrader Pro Logo" width="200" height="45">
+                                    <p class="footer-tagline">Advanced Trading Platform for Professionals</p>
+                                </div>
+                                
+                                <div class="footer-social">
+                                    <h4 class="social-title">Connect With Us</h4>
+                                    <div class="social-links">
+                                        <a href="#" aria-label="Twitter" class="social-icon">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" aria-label="LinkedIn" class="social-icon">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="#" aria-label="GitHub" class="social-icon">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="#" aria-label="YouTube" class="social-icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <!-- Middle Section: Quick Links -->
+                            <nav class="footer-navigation">
+                                <h4 class="footer-nav-title">Market Tools</h4>
+                                <ul class="footer-nav-list">
+                                    <li><a href="/market-data">Real-Time Data</a></li>
+                                    <li><a href="/research">Research Tools</a></li>
+                                    <li><a href="/trading-platform">Trading Platform</a></li>
+                                    <li><a href="/portfolio-analysis">Portfolio Analysis</a></li>
+                                </ul>
+                            </nav>
+                
+                            <!-- Right Section: Legal Links -->
+                            <nav class="footer-navigation">
+                                <h4 class="footer-nav-title">Company</h4>
+                                <ul class="footer-nav-list">
+                                    <li><a href="/about">About Us</a></li>
+                                    <li><a href="/contact">Contact Support</a></li>
+                                    <li><a href="/careers">Careers</a></li>
+                                    <li><a href="/press">Press</a></li>
+                                </ul>
+                            </nav>
+                
+                            <!-- Far Right Section: Legal -->
+                            <nav class="footer-navigation">
+                                <h4 class="footer-nav-title">Legal</h4>
+                                <ul class="footer-nav-list">
+                                    <li><a href="/privacy">Privacy Policy</a></li>
+                                    <li><a href="/terms">Terms of Service</a></li>
+                                    <li><a href="/disclosures">Disclosures</a></li>
+                                    <li><a href="/compliance">Compliance</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                
+                        <div class="footer-legal">
+                            <div class="legal-text">
+                                <p>&copy; <span id="current-year"></span> StockTrader Pro LLC. All rights reserved.</p>
+                                <p>Member FINRA/SIPC. Securities products are: Not FDIC Insured • Not Bank Guaranteed • May Lose Value</p>
+                            </div>
+                            <div class="regulatory-logos">
+                                <img src="{{ url_for('static', filename='images/finra-logo.png') }}" alt="FINRA Member" width="80">
+                                <img src="{{ url_for('static', filename='images/sipc-logo.png') }}" alt="SIPC Member" width="80">
+                            </div>
+                        </div>
                     </div>
-          </footer>
+                </footer>
   
-          <script>
-                    // Mobile navigation toggle
-                    const navToggle = document.getElementById('nav-toggle');
-                    const primaryNav = document.getElementById('primary-navigation');
-
-                    navToggle.addEventListener('click', () => {
-                              const visibility = primaryNav.getAttribute('data-visible');
-
-                              if (visibility === "false") {
-                                        primaryNav.setAttribute('data-visible', "true");
-                                        navToggle.setAttribute('aria-expanded', "true");
-                              } else {
-                                        primaryNav.setAttribute('data-visible', "false");
-                                        navToggle.setAttribute('aria-expanded', "false");
-                              }
-                    });
-
-                    // Scroll top button
-                    const scrollTop = document.getElementById('scroll-top');
-                    window.addEventListener('scroll', () => {
-                              if (window.pageYOffset > 300) {
-                                        scrollTop.classList.add('visible');
-                                        document.querySelector('.main-header').classList.add('scrolled');
-                              } else {
-                                        scrollTop.classList.remove('visible');
-                                        document.querySelector('.main-header').classList.remove('scrolled');
-                              }
-                    });
-
-                    scrollTop.addEventListener('click', () => {
-                              window.scrollTo({ top: 0, behavior: 'smooth' });
-                    });
-                   </script>
+          <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

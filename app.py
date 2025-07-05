@@ -87,5 +87,14 @@ def page_not_found(e):
 def internal_server_error(e):
     return render_template('500.html'), 500
 
+@app.route('/forgot_password')
+def forgot_password():
+    return render_template("forgot_password.html")
+
+@app.route('/logout')
+def logout():
+    session.clear()
+    return redirect(url_for('index'))   
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
